@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SITE_NAME — TAGLINE</title>
+  <meta name="description" content="META_DESCRIPTION">
+  <meta name="keywords" content="KEYPHRASE, KEYWORD2, KEYWORD3">
+  <link rel="canonical" href="https://DOMAIN">
+  <!-- OG -->
+  <meta property="og:title" content="SITE_NAME — TAGLINE">
+  <meta property="og:description" content="META_DESCRIPTION">
+  <meta property="og:image" content="https://DOMAIN/og.png">
+  <meta property="og:url" content="https://DOMAIN">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SITE_NAME","url":"https://DOMAIN","logo":"https://DOMAIN/logo.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SITE_NAME","url":"https://DOMAIN","potentialAction":{"@type":"SearchAction","target":"https://DOMAIN/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SITE_NAME","description":"META_DESCRIPTION","url":"https://DOMAIN"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SITE_NAME","applicationCategory":"APPLICATION_CATEGORY","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <!-- GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM_ID');</script>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-logo"><img src="/logo.png" alt="SITE_NAME" width="32" height="32"> <span>SITE_NAME</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="/dashboard" class="btn btn-sm">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>HERO_HEADLINE</h1>
+      <p class="hero-sub">HERO_SUBHEADLINE</p>
+      <div class="hero-cta">
+        <a href="/signup" class="btn btn-primary btn-lg">CTA_PRIMARY</a>
+        <a href="#features" class="btn btn-ghost btn-lg">CTA_SECONDARY</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <p>Trusted by teams at</p>
+    <div class="logo-bar"><!-- Partner logos --></div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <h2>FEATURES_HEADLINE</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="feature-icon">ICON_1</div><h3>FEATURE_1_TITLE</h3><p>FEATURE_1_DESC</p></div>
+      <div class="feature-card"><div class="feature-icon">ICON_2</div><h3>FEATURE_2_TITLE</h3><p>FEATURE_2_DESC</p></div>
+      <div class="feature-card"><div class="feature-icon">ICON_3</div><h3>FEATURE_3_TITLE</h3><p>FEATURE_3_DESC</p></div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <div class="price">$0<span>/mo</span></div>
+        <ul><li>FEATURE_FREE_1</li><li>FEATURE_FREE_2</li><li>FEATURE_FREE_3</li></ul>
+        <a href="/signup" class="btn btn-ghost">Get Started</a>
+      </div>
+      <div class="pricing-card recommended">
+        <div class="badge">Recommended</div>
+        <h3>Pro</h3>
+        <div class="price">$50<span>/mo</span></div>
+        <ul><li>Everything in Free</li><li>FEATURE_PRO_1</li><li>FEATURE_PRO_2</li><li>FEATURE_PRO_3</li></ul>
+        <a href="/signup?plan=pro" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <h2>FINAL_CTA_HEADLINE</h2>
+    <p>FINAL_CTA_SUB</p>
+    <a href="/signup" class="btn btn-primary btn-lg">CTA_PRIMARY</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="/logo.png" alt="SITE_NAME" width="24" height="24">
+        <p>META_DESCRIPTION</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/dashboard">Dashboard</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:hey@megabyte.space">hey@megabyte.space</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SITE_NAME. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <!-- PostHog -->
+  <script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('POSTHOG_KEY',{api_host:'https://posthog.megabyte.space'})</script>
+</body>
+</html>
