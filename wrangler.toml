@@ -1,0 +1,21 @@
+name = "PROJECT_NAME"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SITE_NAME = ""
+SITE_DESCRIPTION = ""
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "PROJECT_NAME-db"
+database_id = ""
+
+[[kv_namespaces]]
+binding = "KV"
+id = ""
+
+[ai]
+binding = "AI"

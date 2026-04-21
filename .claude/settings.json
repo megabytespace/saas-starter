@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx wrangler *)",
+      "Bash(npx playwright *)",
+      "Bash(npx tsc *)",
+      "Bash(npx @biomejs/biome *)",
+      "Bash(npx drizzle-kit *)",
+      "Bash(bun *)",
+      "Bash(npm *)"
+    ]
+  }
+}
