@@ -7,7 +7,10 @@ import { healthRoute } from './routes/health';
 import { authRoute } from './routes/auth';
 import { billingRoute } from './routes/billing';
 import { apiRoute } from './routes/api';
+import { aiRoute } from './routes/ai';
 import { pagesRoute } from './routes/pages';
+import scheduled from './scheduled';
+import queue from './queue';
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -21,6 +24,7 @@ app.route('/health', healthRoute);
 app.route('/auth', authRoute);
 app.route('/billing', billingRoute);
 app.route('/api', apiRoute);
+app.route('/ai', aiRoute);
 app.route('/', pagesRoute);
 
 /** Centralized error handler — Sentry breadcrumb + structured envelope */
@@ -31,5 +35,12 @@ app.onError((err, c) => {
 
 app.notFound((c) => c.json({ error: 'Not found', code: 'NOT_FOUND' }, 404));
 
+export { SessionDO } from './durable-object';
 export type AppType = typeof app;
-export default app;
+
+/** CF Worker entry point — Hono fetch + scheduled cron + queue consumer */
+export default {
+  fetch: app.fetch,
+  scheduled: scheduled.scheduled,
+  queue: queue.queue,
+};
