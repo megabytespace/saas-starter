@@ -2,6 +2,7 @@ name = "PROJECT_NAME"
 main = "src/index.ts"
 compatibility_date = "2025-04-01"
 compatibility_flags = ["nodejs_compat"]
+not_found_handling = "single-page-application"
 
 [vars]
 SITE_NAME = ""
@@ -17,5 +18,17 @@ database_id = ""
 binding = "KV"
 id = ""
 
+[[kv_namespaces]]
+binding = "CACHE"
+id = ""
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "PROJECT_NAME-uploads"
+
 [ai]
 binding = "AI"
+
+[assets]
+binding = "ASSETS"
+directory = "./public"
