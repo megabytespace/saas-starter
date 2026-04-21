@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run check
+      - name: Install Playwright
+        run: bunx playwright install --with-deps chromium
+      - name: E2E Tests
+        run: bun run test
+        env:
+          PROD_URL: ${{ vars.PROD_URL }}
