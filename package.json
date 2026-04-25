@@ -6,7 +6,8 @@
     "deploy": "wrangler deploy",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "wrangler d1 migrations apply DB --remote",
-    "check": "tsc --noEmit && biome check src/",
+    "check": "tsc --noEmit && eslint src/ && prettier --check src/",
+    "fix": "eslint --fix src/ && prettier --write src/",
     "test": "playwright test",
     "test:e2e": "PROD_URL=$PROD_URL playwright test"
   },
@@ -23,7 +24,9 @@
   "devDependencies": {
     "wrangler": "^4",
     "drizzle-kit": "^0.28",
-    "@biomejs/biome": "^1.9",
+    "eslint": "^9",
+    "typescript-eslint": "^8",
+    "prettier": "^3",
     "@playwright/test": "^1.49",
     "typescript": "^5.7"
   }
