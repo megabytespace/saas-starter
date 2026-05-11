@@ -65,6 +65,16 @@ for SECRET in CLERK_SECRET_KEY CLERK_WEBHOOK_SECRET STRIPE_SECRET_KEY STRIPE_WEB
   fi
 done
 
+# Step 5b: Auto-provision analytics (GA4 + GTM + PostHog + Sentry)
+emdash_section "Provisioning analytics" 2>/dev/null || echo "--- Analytics provisioning ---"
+PROVISION="$HOME/.agentskills/bin/provision-analytics.sh"
+if [ -x "$PROVISION" ]; then
+  WRANGLER_PUSH=1 LOCAL_ENV="./.env.local" "$PROVISION" "$PROJECT" "$DOMAIN" "$PROJECT" || \
+    echo "[warn] provision-analytics failed (missing POSTHOG_PERSONAL_API_KEY / SENTRY_AUTH_TOKEN / ADC?) — continuing"
+else
+  echo "[warn] $PROVISION not found — skipping analytics provisioning"
+fi
+
 # Step 6: Deploy
 emdash_section "Deploying" 2>/dev/null || echo "--- Deploying ---"
 npx wrangler deploy
